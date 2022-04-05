@@ -1,0 +1,27 @@
+version: '3'
+services: 
+  mongooo:
+    image: 'mongo'
+    restart: 'always'
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=
+      - MONGO_INITDB_ROOT_PASSWORD=
+    volumes:
+      - my_data:/data/db
+    ports:
+      - "27017-27019:27017-27019"
+    
+  nodeapp:
+    image: nelor/nodove1
+    depends_on:
+      - mongooo
+    ports:
+      - 5000:5000
+  
+  client:
+    image: nelor/angulare1
+    ports:
+      - 4200:80
+
+volumes:
+  my_data:

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Students</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+</head>
+
+<body>
+    <div class="container-scroller">
+        <!-- partial:partials/_navbar.html -->
+        <app-navbar></app-navbar>
+
+        <!-- partial -->
+        <div class="container-fluid page-body-wrapper">
+            <!-- partial:partials/_sidebar.html -->
+            <app-admin-sidebar></app-admin-sidebar>
+            <!-- partial -->
+            <div class="main-panel">
+                <div class="content-wrapper">
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="d-flex justify-content-center flex-wrap">
+                                <div class="col-md-6 grid-margin stretch-card">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Add student</h4>
+                                            <form class="forms-sample" #myForm="ngForm" (ngSubmit)="addStudent(myForm)">
+                                                <div class="form-group row">
+                                                    <div class="col-sm-9">
+                                                        <input required name="susername" ngModel type="text" class="form-control" placeholder="Username">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="col-sm-9">
+                                                        <input required name="password" ngModel type="password" class="form-control"
+                                                            placeholder="Password">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="col-sm-9">
+                                                        <input required name="index"ngModel type="text" class="form-control" placeholder="Index">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="col-sm-9">
+                                                        <input required name="firstName" ngModel type="text" class="form-control"
+                                                            placeholder="First name">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="col-sm-9">
+                                                        <input required name="lastName" ngModel type="text" class="form-control" placeholder="Last name">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="col-sm-9">
+                                                        <input required name="cuin" ngModel type="text" class="form-control" placeholder="CUIN">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="col-sm-9">
+                                                        <input required name="email" ngModel type="email" class="form-control" placeholder="Email">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="col-sm-9">
+                                                        <input required name="status" ngModel type="text" class="form-control" placeholder="Status">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="col-sm-9">
+                                                        <input required name="type" ngModel tpye="text" class="form-control"
+                                                            placeholder="Type of studies">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="col-sm-9">
+                                                        <input required name="studyYear" ngModel type="number" class="form-control"
+                                                            placeholder="Year of study">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row">
+                                                    <div class="col-sm-9">
+                                                        <input required name="startYear" ngModel="startYear" type="number" class="form-control"
+                                                            placeholder="Year of start">
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group row">
+                                                    <select required class="col-sm-9" name="way" ngModel>
+                                                        <option *ngFor="let way of ways" [value]="way.name">{{way.name}}</option>
+                                                    </select>
+                                                </div>
+                                                <button type="submit" class="btn btn-primary me-2">Add student</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- content-wrapper ends -->
+                    <!-- partial:partials/_footer.html -->
+                    <footer class="footer">
+                        <div class="d-sm-flex justify-content-center justify-content-sm-between">
+                            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright ©
+                                Dusan Gogic 2022</span>
+                        </div>
+                    </footer>
+                    <!-- partial -->
+                </div>
+                <!-- main-panel ends -->
+            </div>
+            <!-- page-body-wrapper ends -->
+        </div>
+        <!-- container-scroller -->
+        <script src="../../vendors/base/vendor.bundle.base.js"></script>
+    </div>
+</body>
+
+</html>

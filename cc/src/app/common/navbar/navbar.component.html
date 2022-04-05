@@ -1,0 +1,14 @@
+<nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+    <div class="navbar-brand-wrapper d-flex justify-content-center">
+        <div class="navbar-brand-inner-wrapper d-flex justify-content-between align-items-center w-100">
+        </div>
+    </div>
+    <div class="col">
+        <div ngbDropdown style="float:right;">
+            <button class="btn btn-warning" id="gfg" ngbDropdownToggle *ngIf="username != undefined">{{username}}</button>
+            <div ngbDropdownMenu="gfg">
+                <button ngbDropdownItem (click)="logout()">Logout</button>
+            </div>
+        </div>
+    </div>
+</nav>
