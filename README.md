@@ -5,6 +5,7 @@ U ovom projektu smo objasnili osnovne koncepte u Docker ekosistemu na primeru ap
 ## Kreiranje slika
 
 Za kreiranje Docker slike za serversku aplikaciju potrebno je otići u direktorijum ServerSide i u terminalu pokrenuti naredbu `docker build -t="nelor/nodove1" .`.
+
 Za kreiranje Docker slike za klijentsku aplikaciju potrebno je otići u direktorijum cc/dist i u terminalu potrenuti naredbu `docker build -t="nelor/angulare1" .`.
 
 ## Pokretanje aplikacije
